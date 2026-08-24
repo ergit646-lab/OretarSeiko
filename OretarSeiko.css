@@ -167,21 +167,18 @@ header.scrolled nav a {
     margin: 15px auto 40px;
 }
 
-/* Rrjeta me 3 kolona */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
-/* E vendos kartën e fundit (Keni pyetje...) saktësisht në mes (kolona e dytë) */
 @media (min-width: 993px) {
     .services-grid .center-card {
         grid-column: 2 / 3;
     }
 }
 
-/* Karta e shërbimit */
 .service-card {
     background-color: #151518;
     border: 1px solid #28282d;
