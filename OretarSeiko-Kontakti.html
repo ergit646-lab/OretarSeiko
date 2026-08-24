@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Orëtar Seiko | SAHATÇIU</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="OretarSeiko-Kontakti.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="main-header">
+           <!-- Logoja e mbështjellë me link për në faqen kryesore -->
+        <a href="OretarSeiko.html" class="logo-link">
+            <img src="logo.png" alt="logo" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><b><a href="OretarSeiko.html">Rreth Nesh</a></b></li>
+                <li><b><a href="OretarSeiko-Kontakti.html">Lokacioni</a></b></li>      
+                <li><b><a href="OretarSeiko-Kontakti.html">Kontakti</a></b></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seksioni i Kontaktit me Videon MP4 në Sfond -->
+    <section class="hero-contact-section">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="ora.mp4" type="video/mp4">
+            Shfletuesi juaj nuk e mbështet videon.
+        </video>
+        
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>NA KONTAKTONI</h1>
+                <p>PËR ÇDO PYETJE, VIZITË APO KËRKESË</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Pjesa e Poshtme: Të dhënat e dyqanit dhe numri yt i telefonit -->
+<section class="white-form-section">
+    <div class="store-contact-container">
+        <h2>ORËTAR SEIKO - MISIN H. SAHATÇIU</h2>
+        <p class="subtitle">Na kontaktoni ose vizitoni dyqanin tonë për çdo lloj shërbimi dhe riparimi.</p>
+        
+        <div class="contact-cards-grid">
+            <!-- Adresa -->
+            <div class="contact-card">
+                <h3> Adresa</h3>
+                <p<br><a>Ramadan Rexhepi 12 , <br> Ferizaj</a></p>
+            </div>
+
+            <!-- Numri i Telefonit -->
+            <div class="contact-card">
+                <h3> Telefoni / Viber / WhatsApp</h3>
+                <p><a href="tel:+383 44 437 136">+383 44 437 136</a></p>
+                <span class="note">Kliko numrin për të telefonuar direkt nga telefoni</span>
+            </div>
+
+            <!-- Orari -->
+            <div class="contact-card">
+                <h3> Orari i Punës</h3>
+                <p>E Hënë – E Shtunë<br>08:00 – 18:00</p>
+            </div>
+        </div>
+    </div>
+</section>
+    
+
+    <script>
+        // Header Scroll Effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+    
+
+<div class="map-container">
+    <h3>Vizitoni Dyqanin Tonë</h3>
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.3312!2d21.1485851!3d42.3702245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13547f003b5cef97%3A0x302fa8fe202552e8!2zT3LDtml0YXIgU2Vpa28!5e0!3m2!1sen!2sxk!4v1724000000000" 
+        width="100%" 
+        height="400" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+
+</body>
+</html>

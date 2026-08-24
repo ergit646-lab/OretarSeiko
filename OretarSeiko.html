@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orëtar Seiko | SAHATÇIU</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="OretarSeiko.css">
+</head>
+<body>
+
+    <header id="main-header">
+        <!-- Logoja e mbështjellë me link për në faqen kryesore -->
+        <a href="OretarSeiko.html" class="logo-link">
+            <img src="logo.png" alt="logo" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><b><a href="OretarSeiko.html">Rreth Nesh</a></b></li>
+                <li><b><a href="OretarSeiko-Kontakti.html">Lokacioni</a></b></li>      
+                <li><b><a href="OretarSeiko-Kontakti.html">Kontakti</a></b></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>ORËTAR SEIKO</h1>
+        <p>Servisimi dhe riparimi i orëve tuaja me përkushtim. Nga ndërrimi i pjesëve e baterive, deri te rregullimi i mekanizmave më të vjetër.</p>
+        <a href="OretarSeiko-Kontakti.html" class="btn">Na Vizitoni</a>
+    </section>
+
+    <!-- SEKSIONI I SHËRBIMEVE (6 KARTA + Karta e Kontaktit në mes) -->
+    <section class="services-grid-section">
+      <h2 class="section-title">SHËRBIMET TONA</h2>
+      <div class="title-line"></div>
+
+      <div class="services-grid">
+        <!-- Row 1 -->
+        <div class="service-card">
+          <div class="service-icon"></div>
+          <h3>Riparim Mekanik</h3>
+          <p>Servisim i detajuar i mekanizmave automatikë dhe me kurdisje manuale.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"></div>
+          <h3>Ndërrim Baterie</h3>
+          <p>Bateri origjinale zvicerane e japoneze me jetëgjatësi të lartë.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"></div>
+          <h3>Ndërrim Xhami</h3>
+          <p>Zëvendësim i xhamave mineral, sapphire apo plexiglass.</p>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="service-card">
+          <div class="service-icon"></div>
+          <h3>Servis Quartz (Me Bateri)</h3>
+          <p>Pastrim i kontakteve elektronike dhe servisim i mekanizmit me bateri.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"></div>
+          <h3>Ndrrim & Përshtatje Rripi</h3>
+          <p>Montim i rripave të rinj lëkure apo çeliku dhe përshtatje e madhësisë.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"></div>
+          <h3>Fiksim Akrepash & Fushe</h3>
+          <p>Rregullimi i akrepave, fiksimi i numrave të rënë dhe pastrim i brendshëm.</p>
+        </div>
+
+        <!-- Karta e fundit e pozicionuar në mes -->
+        <div class="service-card center-card">
+          <div class="service-icon"></div>
+          <h3>Keni pyetje për orën tuaj?</h3>
+          <p>Për çdo defekt apo nevojë tjetër specifikisht për orën tuaj, na vizitoni në punishte ose na kontaktoni direkt.
+            <br><b>+38344437136</b>
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="testimonial-section">
+      <video autoplay muted loop playsinline class="bg-video">
+        <source src="Automatic.mp4" type="video/mp4">
+      </video>
+      <div class="video-overlay"></div>
+      <div class="testimonial-card">
+        <blockquote>
+        "Familja ime i ka besuar Orëtarisë SEIKO (Misin H. Sahatçiu) prej shumë viteve me radhë. Familja Sahatçiu njihet brez pas brezi për mjeshtëri dhe përkushtim të lartë në artin e orëtarisë."
+        </blockquote>
+        <p class="author">— Klient i Rregullt</p>
+      </div>
+    </section>
+
+    <section class="banner-stats" id="rreth-nesh">
+        <div class="stat-box">
+            <h2>100+</h2>
+            <h3>Vjet Traditë</h3>
+            <p>Përvojë dhe pasion i përcjellë brez pas brezi nga familja Sahatçiu.</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>100%</h2>
+            <h3>Besueshmëri</h3>
+            <p>Kujdes maksimal dhe përkushtim i plotë për çdo detaj të orës tuaj.</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>Garanci</h2>
+            <h3>Pjesë Origjinale</h3>
+            <p>Çdo shërbim kryhet me vegla adekuate dhe pjesë cilësore për jetëgjatësi maksimale.</p>
+        </div>
+    </section>
+
+    <footer id="lokacioni">
+        <div class="footer-links">
+            <a href="OretarSeiko-Kontakti.html">Lokacioni</a>
+        </div>
+        <p>&copy; Oretar Seiko</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                } else {
+                    entry.target.classList.remove('show');
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        const statBoxes = document.querySelectorAll('.stat-box');
+        statBoxes.forEach(box => observer.observe(box));
+    </script>
+
+</body>
+</html>
