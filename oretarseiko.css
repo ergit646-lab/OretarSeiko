@@ -364,16 +364,17 @@ footer .footer-links {
 
 @media (max-width: 768px) {
     header {
-        padding: 12px 5% 15px;
+        padding: 10px 5% 12px;
     }
 
     header .logo {
-        height: 85px;
-        margin-bottom: 10px;
+        height: 55px; /* E zvogëlon logon bukur për telefon */
+        max-width: 140px;
+        margin-bottom: 6px;
     }
 
     nav ul {
-        gap: 15px;
+        gap: 12px;
         flex-wrap: wrap;
     }
 
@@ -393,7 +394,6 @@ footer .footer-links {
 
 @media (max-width: 600px) {
     .services-grid {
-        grid-template-columns: 1fr;           
+        grid-template-columns: 1fr;            
     }
 }
-  
