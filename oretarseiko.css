@@ -30,7 +30,7 @@ header {
     top: 0;
     z-index: 100;
     border-bottom: 1px solid #222;
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
     will-change: transform;
     transform: translateZ(0);
 }
@@ -42,7 +42,9 @@ header .logo {
     object-fit: contain;
     display: block;
     margin-bottom: 8px;
-    transition: transform 0.3s ease, margin-bottom 0.3s ease;
+    opacity: 1;
+    visibility: visible;
+    transition: transform 0.3s ease, margin-bottom 0.3s ease, height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
     transform-origin: center top;
 }
 
@@ -78,14 +80,17 @@ nav a:hover {
     color: #575656;
 }
 
-/* --- HEADER WHEN SCROLLING --- */
+/* --- HEADER WHEN SCROLLING (Veq logo zhduket) --- */
 header.scrolled {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 header.scrolled .logo {
-    transform: scale(0.4);
-    margin-bottom: -85px; 
+    transform: scale(0);
+    height: 0;
+    margin-bottom: 0;
+    opacity: 0;
+    visibility: hidden;
 }
 
 header.scrolled nav a {
@@ -364,17 +369,16 @@ footer .footer-links {
 
 @media (max-width: 768px) {
     header {
-        padding: 10px 5% 12px;
+        padding: 12px 5% 15px;
     }
 
     header .logo {
-        height: 55px; /* E zvogëlon logon bukur për telefon */
-        max-width: 140px;
-        margin-bottom: 6px;
+        height: 85px;
+        margin-bottom: 10px;
     }
 
     nav ul {
-        gap: 12px;
+        gap: 15px;
         flex-wrap: wrap;
     }
 
