@@ -3,35 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Orëtar Seiko | Kontakti</title>
+    <title>Orëtar Seiko | Kontakti</title>
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="Logo2.jpg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="oretarseiko-kontakti.css">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K11Q69XEP3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K11Q69XEP3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-K11Q69XEP3');
-</script>
-    
+      gtag('config', 'G-K11Q69XEP3');
+    </script>
 </head>
 <body>
 
     <!-- Header -->
     <header id="main-header">
-           <!-- Logoja e mbështjellë me link për në faqen kryesore -->
         <a href="./" class="logo-link">
             <img src="Logo.png" alt="logo" class="logo">
         </a>
         <nav>
             <ul>
                 <li><b><a href="index.html">Rreth Nesh</a></b></li>
-                <li><b><a href="kontakt.html">Lokacioni</a></b></li>      
+                <li><b><a href="kontakt.html">Lokacioni</a></b></li>    
                 <li><b><a href="kontakt.html">Kontakti</a></b></li>
             </ul>
         </nav>
@@ -52,38 +54,51 @@
         </div>
     </section>
 
-<!-- Pjesa e Poshtme: Të dhënat e dyqanit dhe numri yt i telefonit -->
-<section class="white-form-section">
-    <div class="store-contact-container">
-        <h2>ORËTAR SEIKO - MISIN H. SAHATÇIU</h2>
-        <p class="subtitle">Na kontaktoni ose vizitoni dyqanin tonë për çdo lloj shërbimi dhe riparimi.</p>
-        
-        <div class="contact-cards-grid">
-            <!-- Adresa -->
-            <div class="contact-card">
-                <h3> Adresa</h3>
-                <p<br><a>Ramadan Rexhepi 12 , <br> Ferizaj</a></p>
-            </div>
+    <!-- Pjesa e Poshtme: Të dhënat e dyqanit -->
+    <section class="white-form-section">
+        <div class="store-contact-container">
+            <h2>ORËTAR SEIKO - MISIN H. SAHATÇIU</h2>
+            <p class="subtitle">Na kontaktoni ose vizitoni dyqanin tonë për çdo lloj shërbimi dhe riparimi.</p>
+            
+            <div class="contact-cards-grid">
+                <!-- Adresa (E rregulluar sintaksa HTML) -->
+                <div class="contact-card">
+                    <h3>Adresa</h3>
+                    <p>Ramadan Rexhepi 12, <br> Ferizaj</p>
+                </div>
 
-            <!-- Numri i Telefonit -->
-            <div class="contact-card">
-                <h3> Telefoni / Viber / WhatsApp</h3>
-                <p><a href="tel:+383 44 437 136">+383 44 437 136</a></p>
-                <span class="note">Kliko numrin për të telefonuar direkt nga telefoni</span>
-            </div>
+                <!-- Numri i Telefonit -->
+                <div class="contact-card">
+                    <h3>Telefoni / Viber / WhatsApp</h3>
+                    <p><a href="tel:+38344437136">+383 44 437 136</a></p>
+                    <span class="note">Kliko numrin për të telefonuar direkt nga telefoni</span>
+                </div>
 
-            <!-- Orari -->
-            <div class="contact-card">
-                <h3> Orari i Punës</h3>
-                <p>E Hënë – E Shtunë<br>08:00 – 18:00</p>
+                <!-- Orari -->
+                <div class="contact-card">
+                    <h3>Orari i Punës</h3>
+                    <p>E Hënë – E Shtunë<br>08:00 – 18:00</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-    
+    </section>
 
+    <!-- Harta -->
+    <div class="map-container">
+        <h3>Vizitoni Dyqanin Tonë</h3>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.3312!2d21.1485851!3d42.3702245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13547f003b5cef97%3A0x302fa8fe202552e8!2zT3LDtml0YXIgU2Vpa28!5e0!3m2!1sen!2sxk!4v1724000000000" 
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+    <!-- Skripti për Header-in gjatë Scroll-it -->
     <script>
-        // Header Scroll Effect
         window.addEventListener('scroll', function() {
             const header = document.getElementById('main-header');
             if (window.scrollY > 50) {
@@ -93,20 +108,6 @@
             }
         });
     </script>
-    
-
-<div class="map-container">
-    <h3>Vizitoni Dyqanin Tonë</h3>
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.3312!2d21.1485851!3d42.3702245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13547f003b5cef97%3A0x302fa8fe202552e8!2zT3LDtml0YXIgU2Vpa28!5e0!3m2!1sen!2sxk!4v1724000000000" 
-        width="100%" 
-        height="400" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-</div>
 
 </body>
 </html>
