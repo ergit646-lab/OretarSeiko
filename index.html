@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oretar Seiko | SAHATÇIU</title>
     <meta name="description" content="Rregullim dhe shitje e orëve Seiko në Ferizaj. Vizitoni dyqanin tonë për modelet më të reja.">
-     
+    
     <!-- FAVICON (Logoja në shfletues) -->
     <link rel="icon" type="image/png" href="Logo2.jpg">
 
@@ -26,16 +26,14 @@
     <link rel="stylesheet" href="oretarseiko.css">
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K11Q69XEP3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K11Q69XEP3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-K11Q69XEP3');
-</script>    
-
-    
+      gtag('config', 'G-K11Q69XEP3');
+    </script>
 </head>
 <body>
 
@@ -63,43 +61,44 @@
       <div class="title-line"></div>
 
       <div class="services-grid">
-        <div class="service-card">
+        <!-- I shtuam klasën service-animate këtu -->
+        <div class="service-card service-animate">
           <div class="service-icon"></div>
           <h3>Riparim Mekanik</h3>
           <p>Servisim i detajuar i mekanizmave automatikë dhe me kurdisje manuale.</p>
         </div>
 
-        <div class="service-card">
+        <div class="service-card service-animate">
           <div class="service-icon"></div>
           <h3>Ndërrim Baterie</h3>
           <p>Bateri origjinale zvicerane e japoneze me jetëgjatësi të lartë.</p>
         </div>
 
-        <div class="service-card">
+        <div class="service-card service-animate">
           <div class="service-icon"></div>
           <h3>Ndërrim Xhami</h3>
           <p>Zëvendësim i xhamave mineral, sapphire apo plexiglass.</p>
         </div>
 
-        <div class="service-card">
+        <div class="service-card service-animate">
           <div class="service-icon"></div>
           <h3>Servis Quartz (Me Bateri)</h3>
           <p>Pastrim i kontakteve elektronike dhe servisim i mekanizmit me bateri.</p>
         </div>
 
-        <div class="service-card">
+        <div class="service-card service-animate">
           <div class="service-icon"></div>
           <h3>Ndërrim & Përshtatje Rripi</h3>
           <p>Montim i rripave të rinj lëkure apo çeliku dhe përshtatje e madhësisë.</p>
         </div>
 
-        <div class="service-card">
+        <div class="service-card service-animate">
           <div class="service-icon"></div>
           <h3>Fiksim Akrepash & Fushe</h3>
           <p>Rregullimi i akrepave, fiksimi i numrave të rënë dhe pastrim i brendshëm.</p>
         </div>
 
-        <div class="service-card center-card">
+        <div class="service-card center-card service-animate">
           <div class="service-icon"></div>
           <h3>Keni pyetje për orën tuaj?</h3>
           <p>Për çdo defekt apo nevojë tjetër specifikisht për orën tuaj, na vizitoni në punishte ose na kontaktoni direkt.
@@ -168,11 +167,12 @@
                 }
             });
         }, {
-            threshold: 0.2
+            threshold: 0.1
         });
 
-        const statBoxes = document.querySelectorAll('.stat-box');
-        statBoxes.forEach(box => observer.observe(box));
+        // Vëzhguesi tani kap edhe stat-box edhe service-animate
+        const animatedElements = document.querySelectorAll('.stat-box, .service-animate');
+        animatedElements.forEach(el => observer.observe(el));
     </script>
 
 </body>
