@@ -80,7 +80,7 @@ nav a:hover {
     color: #575656;
 }
 
-/* --- HEADER WHEN SCROLLING (Veq logo zhduket) --- */
+/* --- HEADER WHEN SCROLLING --- */
 header.scrolled {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
@@ -184,16 +184,28 @@ header.scrolled nav a {
     }
 }
 
+/* Animacioni që ngre kutitë e shërbimeve nga poshtë (fiks si stat-box) */
+.service-card.service-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card.service-animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .service-card {
     background-color: #151518;
     border: 1px solid #28282d;
     padding: 35px 22px;
     border-radius: 4px;
     text-align: center;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
 
+/* Efekti hover kur kalon mi to */
 .service-card:hover {
     transform: translateY(-6px);
     border-color: #8C0A19;
