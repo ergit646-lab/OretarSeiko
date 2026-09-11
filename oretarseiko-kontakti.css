@@ -24,7 +24,8 @@ header {
     justify-content: center;
     align-items: center;
     padding: 15px 8%;
-    background-color: #fdfbd4;
+    background-color: #fdfbd4 !important; /* Detyron prapavijën kreme */
+    color-scheme: light !important;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -68,12 +69,12 @@ nav a {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #8C0A19;
+    color: #8C0A19 !important; /* Detyron ngjyrën e kuqe të tekstit */
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #575656;
+    color: #575656 !important;
 }
 
 /* --- HEADER KUR BËN SCROLL --- */
@@ -281,5 +282,15 @@ header.scrolled nav a {
     .contact-cards-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+}
+
+/* --- OVERRIDE PËR DARK MODE TË TELEFONAVE --- */
+@media (prefers-color-scheme: dark) {
+    header {
+        background-color: #fdfbd4 !important;
+    }
+    nav a {
+        color: #8C0A19 !important;
     }
 }
