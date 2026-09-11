@@ -1,17 +1,46 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="sq">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orëtar Seiko | Kontakti</title>
     
-    <!-- FAVICON -->
+    <!-- Ndalon plotësisht Dark Mode në shfletuesit e telefonit (iOS & Android) -->
+    <meta name="color-scheme" content="light only">
+    <meta name="supported-color-schemes" content="light">
+    <meta name="theme-color" content="#fdfbd4">
+    
+    <style>
+        :root {
+            color-scheme: light only !important;
+            supported-color-schemes: light !important;
+        }
+        #main-header {
+            background-color: #fdfbd4 !important;
+            color-scheme: light only !important;
+        }
+    </style>
+
+    <title>Oretar Seiko | SAHATÇIU</title>
+    <meta name="description" content="Rregullim dhe shitje e orëve Seiko në Ferizaj. Vizitoni dyqanin tonë për modelet më të reja.">
+    
+    <!-- FAVICON (Logoja në shfletues) -->
     <link rel="icon" type="image/png" href="Logo2.jpg">
+
+    <!-- GOOGLE LOGO SCHEMA (Për t'u shfaqur logoja te Google) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Orëtar Seiko",
+      "url": "https://oretarseiko.com",
+      "logo": "https://oretarseiko.com/Logo2.jpg"
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="oretarseiko-kontakti.css">
+    <link rel="stylesheet" href="oretarseiko.css">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K11Q69XEP3"></script>
@@ -23,81 +52,118 @@
       gtag('config', 'G-K11Q69XEP3');
     </script>
 </head>
-<body>
+<body style="color-scheme: light only;">
 
-    <!-- Header -->
-    <header id="main-header">
+    <header id="main-header" style="background-color: #fdfbd4 !important; color-scheme: light only !important;">
         <a href="./" class="logo-link">
             <img src="Logo.png" alt="logo" class="logo">
         </a>
         <nav>
             <ul>
-                <li><b><a href="index.html">Rreth Nesh</a></b></li>
+               <li><b><a href="#rreth-nesh">Rreth Nesh</a></b></li>
                 <li><b><a href="kontakt.html">Lokacioni</a></b></li>    
                 <li><b><a href="kontakt.html">Kontakti</a></b></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Seksioni i Kontaktit me Videon MP4 në Sfond -->
-    <section class="hero-contact-section">
-        <video autoplay muted loop playsinline class="bg-video">
-            <source src="Ora.mp4" type="video/mp4">
-            Shfletuesi juaj nuk e mbështet videon.
-        </video>
-        
-        <div class="hero-overlay">
-            <div class="hero-content">
-                <h1>NA KONTAKTONI</h1>
-                <p>PËR ÇDO PYETJE, VIZITË APO KËRKESË</p>
-            </div>
+    <section class="hero">
+        <h1>ORËTAR SEIKO</h1>
+        <p>Servisimi dhe riparimi i orëve tuaja me përkushtim. Nga ndërrimi i pjesëve e baterive, deri te rregullimi i mekanizmave më të vjetër.</p>
+        <a href="kontakt.html" class="btn">Na Vizitoni</a>
+    </section>
+
+    <section class="services-grid-section">
+      <h2 class="section-title">SHËRBIMET TONA</h2>
+      <div class="title-line"></div>
+
+      <div class="services-grid">
+        <div class="service-card service-animate">
+          <div class="service-icon"></div>
+          <h3>Riparim Mekanik</h3>
+          <p>Servisim i detajuar i mekanizmave automatikë dhe me kurdisje manuale.</p>
+        </div>
+
+        <div class="service-card service-animate">
+          <div class="service-icon"></div>
+          <h3>Ndërrim Baterie</h3>
+          <p>Bateri origjinale zvicerane e japoneze me jetëgjatësi të lartë.</p>
+        </div>
+
+        <div class="service-card service-animate">
+          <div class="service-icon"></div>
+          <h3>Ndërrim Xhami</h3>
+          <p>Zëvendësim i xhamave mineral, sapphire apo plexiglass.</p>
+        </div>
+
+        <div class="service-card service-animate">
+          <div class="service-icon"></div>
+          <h3>Servis Quartz (Me Bateri)</h3>
+          <p>Pastrim i kontakteve elektronike dhe servisim i mekanizmit me bateri.</p>
+        </div>
+
+        <div class="service-card service-animate">
+          <div class="service-icon"></div>
+          <h3>Ndërrim & Përshtatje Rripi</h3>
+          <p>Montim i rripave të rinj lëkure apo çeliku dhe përshtatje e madhësisë.</p>
+        </div>
+
+        <div class="service-card service-animate">
+          <div class="service-icon"></div>
+          <h3>Fiksim Akrepash & Fushe</h3>
+          <p>Rregullimi i akrepave, fiksimi i numrave të rënë dhe pastrim i brendshëm.</p>
+        </div>
+
+        <div class="service-card center-card service-animate">
+          <div class="service-icon"></div>
+          <h3>Keni pyetje për orën tuaj?</h3>
+          <p>Për çdo defekt apo nevojë tjetër specifikisht për orën tuaj, na vizitoni në punishte ose na kontaktoni direkt.
+            <br><b>+38344437136</b>
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="testimonial-section">
+      <video autoplay muted loop playsinline class="bg-video">
+        <source src="Automatic.mp4" type="video/mp4">
+      </video>
+      <div class="video-overlay"></div>
+      <div class="testimonial-card">
+        <blockquote>
+        "Familja ime i ka besuar Orëtarisë SEIKO (Misin H. Sahatçiu) prej shumë viteve me radhë. Familja Sahatçiu njihet brez pas brezi për mjeshtëri dhe përkushtim të lartë në artin e orëtarisë."
+        </blockquote>
+        <p class="author">— Klient i Rregullt</p>
+      </div>
+    </section>
+
+    <section class="banner-stats" id="rreth-nesh">
+        <div class="stat-box">
+            <h2>100+</h2>
+            <h3>Vjet Traditë</h3>
+            <p>Përvojë dhe pasion i përcjellë brez pas brezi nga familja Sahatçiu.</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>100%</h2>
+            <h3>Besueshmëri</h3>
+            <p>Kujdes maksimal dhe përkushtim i plotë për çdo detaj të orës tuaj.</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>Garanci</h2>
+            <h3>Pjesë Origjinale</h3>
+            <p>Çdo shërbim kryhet me vegla adekuate dhe pjesë cilësore për jetëgjatësi maksimale.</p>
         </div>
     </section>
 
-    <!-- Pjesa e Poshtme: Të dhënat e dyqanit -->
-    <section class="white-form-section">
-        <div class="store-contact-container">
-            <h2>ORËTAR SEIKO - MISIN H. SAHATÇIU</h2>
-            <p class="subtitle">Na kontaktoni ose vizitoni dyqanin tonë për çdo lloj shërbimi dhe riparimi.</p>
-            
-            <div class="contact-cards-grid">
-                <!-- Adresa (E rregulluar sintaksa HTML) -->
-                <div class="contact-card">
-                    <h3>Adresa</h3>
-                    <p>Ramadan Rexhepi 12, <br> Ferizaj</p>
-                </div>
-
-                <!-- Numri i Telefonit -->
-                <div class="contact-card">
-                    <h3>Telefoni / Viber / WhatsApp</h3>
-                    <p><a href="tel:+38344437136">+383 44 437 136</a></p>
-                    <span class="note">Kliko numrin për të telefonuar direkt nga telefoni</span>
-                </div>
-
-                <!-- Orari -->
-                <div class="contact-card">
-                    <h3>Orari i Punës</h3>
-                    <p>E Hënë – E Shtunë<br>09:00 – 20:00</p>
-                </div>
-            </div>
+    <footer id="lokacioni">
+        <div class="footer-links">
+            <a href="kontakt.html">Lokacioni</a>
         </div>
-    </section>
+        <p>&copy; Oretar Seiko</p>
+    </footer>
 
-    <!-- Harta -->
-    <div class="map-container">
-        <h3>Vizitoni Dyqanin Tonë</h3>
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.3312!2d21.1485851!3d42.3702245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13547f003b5cef97%3A0x302fa8fe202552e8!2zT3LDtml0YXIgU2Vpa28!5e0!3m2!1sen!2sxk!4v1724000000000" 
-            width="100%" 
-            height="400" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-    </div>
-
-    <!-- Skripti për Header-in gjatë Scroll-it -->
     <script>
         window.addEventListener('scroll', function() {
             const header = document.getElementById('main-header');
@@ -107,6 +173,21 @@
                 header.classList.remove('scrolled');
             }
         });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                } else {
+                    entry.target.classList.remove('show');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        const animatedElements = document.querySelectorAll('.stat-box, .service-animate');
+        animatedElements.forEach(el => observer.observe(el));
     </script>
 
 </body>
