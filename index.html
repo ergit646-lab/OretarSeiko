@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Ndalon Dark Mode e shfletuesve në celular -->
+    <meta name="color-scheme" content="light">
+    <meta name="supported-color-schemes" content="light">
+    <style>
+        :root {
+            color-scheme: light;
+        }
+    </style>
+
     <title>Oretar Seiko | SAHATÇIU</title>
     <meta name="description" content="Rregullim dhe shitje e orëve Seiko në Ferizaj. Vizitoni dyqanin tonë për modelet më të reja.">
     
@@ -61,7 +71,6 @@
       <div class="title-line"></div>
 
       <div class="services-grid">
-        <!-- I shtuam klasën service-animate këtu -->
         <div class="service-card service-animate">
           <div class="service-icon"></div>
           <h3>Riparim Mekanik</h3>
@@ -170,7 +179,6 @@
             threshold: 0.1
         });
 
-        // Vëzhguesi tani kap edhe stat-box edhe service-animate
         const animatedElements = document.querySelectorAll('.stat-box, .service-animate');
         animatedElements.forEach(el => observer.observe(el));
     </script>
