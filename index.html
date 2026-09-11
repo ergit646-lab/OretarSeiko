@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Ndalon Dark Mode e shfletuesve në celular -->
-    <meta name="color-scheme" content="light">
+    <!-- Ndalon plotësisht Dark Mode në shfletuesit e telefonit -->
+    <meta name="color-scheme" content="light only">
     <meta name="supported-color-schemes" content="light">
+    <meta name="theme-color" content="#fdfbd4">
+    
     <style>
         :root {
-            color-scheme: light;
+            color-scheme: light only !important;
+        }
+        #main-header {
+            background-color: #fdfbd4 !important;
         }
     </style>
 
@@ -47,7 +52,7 @@
 </head>
 <body>
 
-    <header id="main-header">
+    <header id="main-header" style="background-color: #fdfbd4 !important;">
         <a href="./" class="logo-link">
             <img src="Logo.png" alt="logo" class="logo">
         </a>
