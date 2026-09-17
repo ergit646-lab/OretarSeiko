@@ -24,12 +24,12 @@ header {
     justify-content: center;
     align-items: center;
     padding: 15px 8% 18px;
-    background-color: #fdfbd4 !important; /* Detyrohet prapavija kreme */
+    background-color: #fdfbd4 !important;
     color-scheme: light !important;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
     border-bottom: 1px solid #e2dfb3;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     will-change: transform;
@@ -73,7 +73,7 @@ nav a {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #8C0A19 !important; /* Detyrohet ngjyra e kuqe e tekstit */
+    color: #8C0A19 !important;
     transition: color 0.3s ease;
 }
 
@@ -423,14 +423,10 @@ footer .footer-links {
     }
 }
 
-
-/* Detyron linqet dhe butonat të jenë të klikueshëm */
-header nav, 
+/* --- FIX I Z-INDEX DHE KLIKUESHMËRISË --- */
 header nav a, 
 .hero .btn, 
 footer a {
-    position: relative !important;
-    z-index: 9999 !important;
     pointer-events: auto !important;
     cursor: pointer !important;
 }
