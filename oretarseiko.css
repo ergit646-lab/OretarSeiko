@@ -26,14 +26,12 @@ header {
     padding: 15px 8% 18px;
     background-color: #fdfbd4 !important;
     color-scheme: light !important;
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 9999; /* Siguron që header-i të jetë gjithmonë mbi çdo përmbajtje */
     border-bottom: 1px solid #e2dfb3;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    will-change: transform;
-    transform: translateZ(0);
+    transition: all 0.3s ease;
+    overflow: hidden; /* Parandalon daljen e elementeve jashtë header-it */
 }
 
 /* --- LOGO --- */
@@ -45,7 +43,7 @@ header .logo {
     margin-bottom: 8px;
     opacity: 1;
     visibility: visible;
-    transition: transform 0.3s ease, margin-bottom 0.3s ease, height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    transition: all 0.3s ease;
     transform-origin: center top;
 }
 
@@ -83,6 +81,7 @@ nav a:hover {
 
 /* --- HEADER WHEN SCROLLING --- */
 header.scrolled {
+    padding: 12px 8%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -100,6 +99,8 @@ header.scrolled nav a {
 
 /* --- HERO SECTION --- */
 .hero {
+    position: relative;
+    z-index: 1;
     height: 80vh;
     background:
         linear-gradient(
@@ -135,6 +136,7 @@ header.scrolled nav a {
 
 /* --- BUTTON --- */
 .btn {
+    display: inline-block;
     padding: 12px 32px;
     background-color: #fdfbd4;
     color: #0f0f11;
@@ -153,6 +155,8 @@ header.scrolled nav a {
 
 /* --- SERVICES GRID SECTION --- */
 .services-grid-section {
+    position: relative;
+    z-index: 1;
     background-color: #0f0f11;
     padding: 70px 8%;
     text-align: center;
@@ -233,6 +237,7 @@ header.scrolled nav a {
 /* --- TESTIMONIAL SECTION --- */
 .testimonial-section {
     position: relative;
+    z-index: 1;
     width: 100%;
     height: 70vh;
     display: flex;
@@ -307,6 +312,8 @@ header.scrolled nav a {
 
 /* --- BANNER STATS SECTION --- */
 .banner-stats {
+    position: relative;
+    z-index: 1;
     background-color: #121215;
     border-top: 1px solid #222;
     border-bottom: 1px solid #222;
@@ -356,6 +363,8 @@ header.scrolled nav a {
 
 /* --- FOOTER --- */
 footer {
+    position: relative;
+    z-index: 1;
     background-color: #08080a;
     padding: 40px 8% 20px;
     border-top: 1px solid #222;
@@ -421,12 +430,4 @@ footer .footer-links {
     nav a {
         color: #8C0A19 !important;
     }
-}
-
-/* --- FIX I Z-INDEX DHE KLIKUESHMËRISË --- */
-header nav a, 
-.hero .btn, 
-footer a {
-    pointer-events: auto !important;
-    cursor: pointer !important;
 }
