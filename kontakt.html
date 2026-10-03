@@ -9,31 +9,6 @@
     <meta name="supported-color-schemes" content="light">
     <meta name="theme-color" content="#fdfbd4">
 
-    <style>
-        :root {
-            color-scheme: light only !important;
-            supported-color-schemes: light !important;
-        }
-        #main-header {
-            background-color: #fdfbd4 !important;
-            color-scheme: light only !important;
-            padding: 15px 10px !important;
-            text-align: center !important;
-        }
-        #main-header .logo-link {
-            display: block !important;
-            text-align: center !important;
-            margin: 0 auto !important;
-        }
-        #main-header .logo {
-            width: 220px !important;
-            max-width: 85% !important;
-            height: auto !important;
-            display: block !important;
-            margin: 0 auto 8px auto !important;
-        }
-    </style>
-
     <title>Orëtar Seiko | Kontakti & Lokacioni</title>
     <meta name="description" content="Na kontaktoni ose vizitoni dyqanin tonë Orëtar Seiko në Ferizaj për riparimin dhe servisimin e orëve.">
 
@@ -58,7 +33,7 @@
 <body style="color-scheme: light only;">
 
     <!-- Header -->
-    <header id="main-header" style="background-color: #fdfbd4 !important;">
+    <header id="main-header">
         <a href="index.html" class="logo-link">
             <img src="Logo.png" alt="logo" class="logo">
         </a>
@@ -140,7 +115,7 @@
     <script>
         window.addEventListener('scroll', function() {
             const header = document.getElementById('main-header');
-            if (window.scrollY > 50) {
+            if (window.scrollY > 30) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
