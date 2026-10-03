@@ -23,27 +23,27 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px 8% 12px;
-    background-color: #fdfbd4 !important; /* Detyron prapavijën kreme */
+    padding: 12px 8%;
+    background-color: #fdfbd4 !important; 
     color-scheme: light !important;
     position: sticky;
     top: 0;
     z-index: 100;
     border-bottom: 1px solid #222;
-    transition: all 0.3s ease;
+    transition: padding 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* --- LOGO --- */
 header .logo {
     width: auto;
-    height: 120px;
+    height: 110px;
+    max-height: 110px;
     object-fit: contain;
     display: block;
     margin-bottom: 6px;
     opacity: 1;
     visibility: visible;
     transition: all 0.3s ease;
-    transform-origin: center top;
 }
 
 .logo-link {
@@ -69,7 +69,7 @@ nav a {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #8C0A19 !important; /* Detyron ngjyrën e kuqe të tekstit */
+    color: #8C0A19 !important; 
     transition: color 0.3s ease;
 }
 
@@ -79,15 +79,14 @@ nav a:hover {
 
 /* --- HEADER KUR BËN SCROLL --- */
 header.scrolled {
-    padding: 8px 8% 10px !important;
+    padding: 8px 8% !important;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 header.scrolled .logo {
-    transform: scale(0);
     height: 0 !important;
+    max-height: 0 !important;
     margin-bottom: 0 !important;
-    padding: 0 !important;
     opacity: 0;
     visibility: hidden;
 }
