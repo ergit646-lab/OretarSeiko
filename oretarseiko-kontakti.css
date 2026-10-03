@@ -23,33 +23,35 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 12px 8%;
+    padding: 10px 8%;
     background-color: #fdfbd4 !important; 
     color-scheme: light !important;
     position: sticky;
     top: 0;
     z-index: 100;
     border-bottom: 1px solid #222;
-    transition: padding 0.3s ease, box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
 }
 
-/* --- LOGO --- */
+/* --- LOGO WRAPPER & LOGO --- */
+.logo-link {
+    display: block;
+    text-decoration: none;
+    border: none;
+    max-height: 120px;
+    opacity: 1;
+    visibility: visible;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease, margin-bottom 0.3s ease;
+    margin-bottom: 6px;
+}
+
 header .logo {
     width: auto;
     height: 110px;
     max-height: 110px;
     object-fit: contain;
     display: block;
-    margin-bottom: 6px;
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.3s ease;
-}
-
-.logo-link {
-    display: inline-block;
-    text-decoration: none;
-    border: none;
 }
 
 nav {
@@ -79,15 +81,13 @@ nav a:hover {
 
 /* --- HEADER KUR BËN SCROLL --- */
 header.scrolled {
-    padding: 8px 8% !important;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-header.scrolled .logo {
-    height: 0 !important;
+header.scrolled .logo-link {
     max-height: 0 !important;
+    opacity: 0 !important;
     margin-bottom: 0 !important;
-    opacity: 0;
     visibility: hidden;
 }
 
@@ -251,7 +251,7 @@ header.scrolled nav a {
 /* --- RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
     header {
-        padding: 12px 5%;
+        padding: 10px 5%;
     }
 
     nav ul {
