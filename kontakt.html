@@ -111,11 +111,11 @@
         <p>&copy; Oretar Seiko</p>
     </footer>
 
-    <!-- Skripti për Header-in gjatë Scroll-it -->
+ <!-- Skripti për Header-in gjatë Scroll-it -->
     <script>
         window.addEventListener('scroll', function() {
             const header = document.getElementById('main-header');
-            if (window.scrollY > 30) {
+            if (window.scrollY > 80) { /* E rritëm nga 30 në 80 */
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
