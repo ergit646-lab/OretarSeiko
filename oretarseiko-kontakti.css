@@ -23,23 +23,24 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15px 8%;
-    background-color: #fdfbd4 !important; /* Detyron prapavijën kreme */
+    padding: 10px 8% 12px; /* Më e ngjeshur lart që logoja të jetë më lart */
+    background-color: #fdfbd4 !important; 
     color-scheme: light !important;
     position: sticky;
     top: 0;
-    z-index: 100;
-    border-bottom: 1px solid #222;
-    transition: padding 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 9999;
+    border-bottom: 1px solid #e2dfb3;
+    transition: all 0.3s ease;
+    overflow: hidden;
 }
 
 /* --- LOGO --- */
 header .logo {
     width: auto;
-    height: 130px;
+    height: 120px; /* E ngritur dhe e zvogëluar pak për të mos zënë shumë vend */
     object-fit: contain;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 4px; /* Hapësirë minimale poshtë logos */
     opacity: 1;
     visibility: visible;
     transition: all 0.3s ease;
@@ -52,6 +53,7 @@ header .logo {
     border: none;
 }
 
+/* --- MENU --- */
 nav {
     width: 100%;
 }
@@ -69,7 +71,7 @@ nav a {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #8C0A19 !important; /* Detyron ngjyrën e kuqe të tekstit */
+    color: #8C0A19 !important; 
     transition: color 0.3s ease;
 }
 
@@ -79,8 +81,7 @@ nav a:hover {
 
 /* --- HEADER KUR BËN SCROLL --- */
 header.scrolled {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 8px 8%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -251,10 +252,35 @@ header.scrolled nav a {
     margin-bottom: 15px;
 }
 
+/* --- FOOTER --- */
+footer {
+    position: relative;
+    z-index: 1;
+    background-color: #08080a;
+    padding: 40px 8% 20px;
+    border-top: 1px solid #222;
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+}
+
+footer .footer-links {
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: #fdfbd4;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ad0b1e;
+}
+
 /* --- RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
     header {
-        padding: 12px 5%;
+        padding: 8px 5%;
     }
 
     nav ul {
