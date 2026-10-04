@@ -1,78 +1,293 @@
+/* --- RESET & BASIC STYLES --- */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f0f11;
+    color: #fdfbd4;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* --- NAVIGATION --- */
 header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 8%;
-    background-color: #fdfbd4 !important; 
-    color-scheme: light !important;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 1px solid #222;
-    /* E heqim ndryshimin e padding-ut që të mos ketë kërcime, lëmë vetëm hijen */
-    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 8%;
+    background-color: #fdfbd4 !important; 
+    color-scheme: light !important;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #222;
+    transition: box-shadow 0.3s ease;
 }
 
 /* --- LOGO WRAPPER & LOGO --- */
 .logo-link {
-    display: block;
-    text-decoration: none;
-    border: none;
-    max-height: 120px;
-    opacity: 1;
-    visibility: visible;
-    overflow: hidden;
-    transition: max-height 0.3s ease, opacity 0.3s ease, margin-bottom 0.3s ease;
-    margin-bottom: 6px;
+    display: block;
+    text-decoration: none;
+    border: none;
+    max-height: 120px;
+    opacity: 1;
+    visibility: visible;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease, margin-bottom 0.3s ease;
+    margin-bottom: 6px;
 }
 
 header .logo {
-    width: auto;
-    height: 110px;
-    max-height: 110px;
-    object-fit: contain;
-    display: block;
+    width: auto;
+    height: 110px;
+    max-height: 110px;
+    object-fit: contain;
+    display: block;
 }
 
 nav {
-    width: 100%;
+    width: 100%;
 }
 
 nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    gap: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
 }
 
 nav a {
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #8C0A19 !important; 
-    transition: color 0.3s ease;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #8C0A19 !important; 
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #575656 !important;
+    color: #575656 !important;
 }
 
 /* --- HEADER KUR BËN SCROLL --- */
 header.scrolled {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 header.scrolled .logo-link {
-    max-height: 0 !important;
-    opacity: 0 !important;
-    margin-bottom: 0 !important;
-    visibility: hidden;
+    max-height: 0 !important;
+    opacity: 0 !important;
+    margin-bottom: 0 !important;
+    visibility: hidden;
 }
 
 header.scrolled nav a {
-    font-size: 13px;
+    font-size: 13px;
+}
+
+/* --- HERO CONTACT SECTION --- */
+.hero-contact-section {
+    position: relative;
+    height: 380px;
+    overflow: hidden;
+    background-color: #0f0f11;
+}
+
+.hero-contact-section .bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 15, 17, 0.75);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    color: #fdfbd4;
+    font-size: 42px;
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    color: #ccc;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* --- SEKSIONI I INFORMACIONIT TË DYQANIT --- */
+.white-form-section {
+    background-color: #fdfbd4;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.store-contact-container {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.store-contact-container h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: #0f0f11;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.store-contact-container .subtitle {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+
+.contact-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.contact-card {
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    padding: 35px 20px;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    border-color: #8C0A19;
+}
+
+.contact-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: #8C0A19;
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    color: #333;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.contact-card a {
+    color: #0f0f11;
+    font-weight: 600;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    color: #8C0A19;
+}
+
+.contact-card .note {
+    display: block;
+    font-size: 11px;
+    color: #888;
+    margin-top: 8px;
+}
+
+/* --- MAP CONTAINER --- */
+.map-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    background: #fdfbd4;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-container h3 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #8C0A19;
+    margin-bottom: 15px;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 5%;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .hero-contact-section {
+        height: 280px;
+    }
+
+    .hero-overlay {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .contact-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* --- OVERRIDE PËR DARK MODE TË TELEFONAVE --- */
+@media (prefers-color-scheme: dark) {
+    header {
+        background-color: #fdfbd4 !important;
+    }
+    nav a {
+        color: #8C0A19 !important;
+    }
 }
