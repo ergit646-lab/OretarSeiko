@@ -23,35 +23,33 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px 8%;
-    background-color: #fdfbd4 !important; 
+    padding: 15px 8%;
+    background-color: #fdfbd4 !important; /* Detyron prapavijën kreme */
     color-scheme: light !important;
     position: sticky;
     top: 0;
     z-index: 100;
     border-bottom: 1px solid #222;
-    transition: box-shadow 0.3s ease;
+    transition: padding 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* --- LOGO WRAPPER & LOGO --- */
-.logo-link {
-    display: block;
-    text-decoration: none;
-    border: none;
-    max-height: 120px;
-    opacity: 1;
-    visibility: visible;
-    overflow: hidden;
-    transition: max-height 0.3s ease, opacity 0.3s ease, margin-bottom 0.3s ease;
-    margin-bottom: 6px;
-}
-
+/* --- LOGO --- */
 header .logo {
     width: auto;
-    height: 110px;
-    max-height: 110px;
+    height: 130px;
     object-fit: contain;
     display: block;
+    margin-bottom: 8px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+    transform-origin: center top;
+}
+
+.logo-link {
+    display: inline-block;
+    text-decoration: none;
+    border: none;
 }
 
 nav {
@@ -71,7 +69,7 @@ nav a {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #8C0A19 !important; 
+    color: #8C0A19 !important; /* Detyron ngjyrën e kuqe të tekstit */
     transition: color 0.3s ease;
 }
 
@@ -81,14 +79,19 @@ nav a:hover {
 
 /* --- HEADER KUR BËN SCROLL --- */
 header.scrolled {
+    padding-top: 10px;
+    padding-bottom: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-header.scrolled .logo-link {
-    max-height: 0 !important;
-    opacity: 0 !important;
-    margin-bottom: 0 !important;
+header.scrolled .logo {
+    transform: scale(0);
+    height: 0;
+    margin-bottom: 0;
+    padding: 0;
+    opacity: 0;
     visibility: hidden;
+    overflow: hidden;
 }
 
 header.scrolled nav a {
@@ -251,7 +254,7 @@ header.scrolled nav a {
 /* --- RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
     header {
-        padding: 10px 5%;
+        padding: 12px 5%;
     }
 
     nav ul {
