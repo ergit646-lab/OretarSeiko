@@ -1,232 +1,78 @@
 /* --- NAVIGATION --- */
 header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 8%;
-    background-color: #fdfbd4 !important; 
-    color-scheme: light !important;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 1px solid #222;
-    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 8%;
+    background-color: #fdfbd4 !important; 
+    color-scheme: light !important;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #222;
+    /* E heqim ndryshimin e padding-ut që të mos ketë kërcime, lëmë vetëm hijen */
+    transition: box-shadow 0.3s ease;
 }
 
 /* --- LOGO WRAPPER & LOGO --- */
 .logo-link {
-    display: block;
-    text-decoration: none;
-    border: none;
-    max-height: 120px;
-    opacity: 1;
-    visibility: visible;
-    overflow: hidden;
-    transition: max-height 0.3s ease, opacity 0.3s ease, margin-bottom 0.3s ease;
-    margin-bottom: 6px;
+    display: block;
+    text-decoration: none;
+    border: none;
+    max-height: 120px;
+    opacity: 1;
+    visibility: visible;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease, margin-bottom 0.3s ease;
+    margin-bottom: 6px;
 }
 
 header .logo {
-    width: auto;
-    height: 110px;
-    max-height: 110px;
-    object-fit: contain;
-    display: block;
+    width: auto;
+    height: 110px;
+    max-height: 110px;
+    object-fit: contain;
+    display: block;
 }
 
 nav {
-    width: 100%;
+    width: 100%;
 }
 
 nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    gap: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
 }
 
 nav a {
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #8C0A19 !important; 
-    transition: color 0.3s ease;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #8C0A19 !important; 
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #575656 !important;
+    color: #575656 !important;
 }
 
 /* --- HEADER KUR BËN SCROLL --- */
 header.scrolled {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 header.scrolled .logo-link {
-    max-height: 0 !important;
-    opacity: 0 !important;
-    margin-bottom: 0 !important;
-    visibility: hidden;
+    max-height: 0 !important;
+    opacity: 0 !important;
+    margin-bottom: 0 !important;
+    visibility: hidden;
 }
 
 header.scrolled nav a {
-    font-size: 13px;
-}
-
-/* --- HERO CONTACT SECTION (VIDEO) --- */
-.hero-contact-section {
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    min-height: 400px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    z-index: 1;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.hero-content h1 {
-    color: #fff;
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-}
-
-.hero-content p {
-    color: #fdfbd4;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    letter-spacing: 1px;
-}
-
-/* --- STORE CONTACT SECTION --- */
-.white-form-section {
-    padding: 60px 8%;
-    background-color: #ffffff;
-    text-align: center;
-}
-
-.store-contact-container h2 {
-    font-family: 'Playfair Display', serif;
-    color: #8C0A19;
-    font-size: 2rem;
-    margin-bottom: 15px;
-}
-
-.store-contact-container .subtitle {
-    color: #555;
-    font-size: 1rem;
-    margin-bottom: 40px;
-}
-
-.contact-cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.contact-card {
-    background: #fdfbd4;
-    padding: 30px;
-    border-radius: 8px;
-    border: 1px solid #e0dec2;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-}
-
-.contact-card:hover {
-    transform: translateY(-5px);
-}
-
-.contact-card h3 {
-    color: #8C0A19;
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    font-family: 'Playfair Display', serif;
-}
-
-.contact-card p, .contact-card a {
-    color: #333;
-    font-size: 1rem;
-    text-decoration: none;
-    line-height: 1.6;
-}
-
-.contact-card a:hover {
-    color: #8C0A19;
-    text-decoration: underline;
-}
-
-.contact-card .note {
-    display: block;
-    font-size: 0.8rem;
-    color: #666;
-    margin-top: 10px;
-}
-
-/* --- MAP CONTAINER --- */
-.map-container {
-    padding: 40px 8%;
-    background-color: #fff;
-    text-align: center;
-}
-
-.map-container h3 {
-    font-family: 'Playfair Display', serif;
-    color: #8C0A19;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-}
-
-/* --- FOOTER --- */
-footer {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 30px 20px;
-}
-
-footer .footer-links a {
-    color: #fdfbd4;
-    text-decoration: none;
-    margin-bottom: 10px;
-    display: inline-block;
-}
-
-footer p {
-    color: #aaa;
-    font-size: 0.9rem;
-    margin-top: 10px;
+    font-size: 13px;
 }
