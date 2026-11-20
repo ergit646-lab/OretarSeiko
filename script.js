@@ -32,8 +32,10 @@ const co=new IntersectionObserver((es,o)=>es.forEach(e=>{if(!e.isIntersecting)re
 $$('b',e.target).forEach(b=>{const n=+b.dataset.n;if(rm){b.textContent=n;return}const s=performance.now();
 (function f(t){const p=Math.min(1,(t-s)/1800);b.textContent=Math.round(n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(s)})}),{threshold:.4});
 $$('.stats').forEach(s=>co.observe(s));
-/* contact form (FormSubmit) */
+/* contact form (FormSubmit) -> ergit646@gmail.com */
+const MAIL_ENDPOINT='https://formsubmit.co/ajax/ergit646@gmail.com';
 const f=$('#cf'),st=$('#st'),btn=$('button[type=submit]',f);
+const say=(m,s='')=>{st.textContent=m;st.dataset.state=s};
 const rules={
 name:v=>v.trim().length>=2||'Shkruani emrin tuaj (të paktën 2 shkronja).',
 email:v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim())||'Shkruani një adresë email të vlefshme, p.sh. emri@gmail.com.',
@@ -44,18 +46,20 @@ fields.forEach(el=>{el.addEventListener('blur',()=>chk(el));el.addEventListener(
 f.addEventListener('submit',async e=>{
 e.preventDefault();
 const bad=fields.filter(el=>!chk(el));
-if(bad.length){bad[0].focus();st.textContent='Ju lutemi korrigjoni fushat e shënuara.';return}
+if(bad.length){bad[0].focus();say('Ju lutemi korrigjoni fushat e shënuara.','err');return}
 const data=Object.fromEntries(new FormData(f));
 if(data._honey)return;
+/* FormSubmit nuk punon kur faqja hapet direkt si file (file://) */
+if(location.protocol==='file:'){say('Formulari punon vetëm kur faqja hapet nga serveri (Live Server ose hosting), jo si file lokal.','err');return}
 data._replyto=data.email;
-const label=btn.textContent;btn.disabled=true;btn.textContent='Po dërgohet…';st.textContent='';
+const label=btn.textContent;btn.disabled=true;btn.textContent='Po dërgohet…';say('');
 try{
-const r=await fetch('https://formsubmit.co/ajax/ergit646@gmail.com',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)});
-const d=await r.json();
+const r=await fetch(MAIL_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)});
+const d=await r.json().catch(()=>({}));
 if(!r.ok||String(d.success)!=='true')throw new Error(d.message||r.status);
-st.textContent='Faleminderit! Mesazhi u dërgua me sukses. Do t’ju përgjigjemi sa më shpejt.';
+say('Faleminderit! Mesazhi u dërgua me sukses. Do t’ju përgjigjemi sa më shpejt.','ok');
 f.reset();fields.forEach(el=>el.removeAttribute('aria-invalid'));
-}catch(err){st.textContent='Mesazhi nuk u dërgua. Ju lutemi provoni përsëri ose na telefononi në +383 44 437 136.'}
+}catch(err){console.error('Formulari i kontaktit:',err);say('Mesazhi nuk u dërgua. Ju lutemi provoni përsëri ose na telefononi në +383 44 437 136.','err')}
 finally{btn.disabled=false;btn.textContent=label}});
 $('#yr').textContent=new Date().getFullYear();
 })();
