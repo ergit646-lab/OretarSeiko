@@ -73,15 +73,17 @@ h3{font-size:1.6rem}
 .ph:hover i{transform:scale(1.07)}
 /* heritage */
 .lt{background:var(--w);color:var(--k)}.lt .btn{border-color:var(--c)}
-.her{display:grid;grid-template-columns:repeat(12,1fr);gap:3.5rem 2rem;align-items:center}
-.her-img{grid-column:1/-1}
-.her-img .big{aspect-ratio:4/5;max-width:30rem}
-.her-tx{grid-column:1/-1;justify-self:center;width:min(100%,52rem)}.her-tx h2,.her-tx p{text-align:center;margin-inline:auto}.her-tx p{max-width:52ch;margin-top:1.4rem;font-size:1.08rem;line-height:1.8}
-.her h2{color:var(--c)}
-.stats{display:flex;flex-wrap:wrap;gap:2rem 3rem;margin:2.6rem auto 0;width:min(100%,calc(52ch*1.08))}
+.her{display:grid;grid-template-columns:1fr;gap:3.5rem 2rem;justify-items:center}
+.her-img{display:none}
+.her-tx{width:min(100%,52rem);text-align:center}
+.her-tx h2,.her-tx p{text-align:center;margin-inline:auto}
+.her-tx p{max-width:52ch;margin-top:1.4rem;font-size:1.08rem;line-height:1.8}
+.her h2{color:var(--c);max-width:16ch}
+.stats{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem 4rem;margin:2.6rem auto 0}
+.stats div,.stats li{text-align:center}
 .stats b{display:block;font:500 clamp(3rem,6vw,4.6rem)/1 var(--serif);color:var(--c)}.stats .p::after{content:"+"}
-.stats span{display:block;max-width:13ch;font-size:.9rem;line-height:1.4}
-.tl{grid-column:1/-1;display:grid;gap:2.4rem;margin-top:2rem}
+.stats span{display:block;max-width:13ch;margin-inline:auto;font-size:.9rem;line-height:1.4}
+.tl{width:100%;display:grid;gap:2.4rem;margin-top:2rem}
 .tl li{position:relative;border-top:1px solid var(--c);padding-top:1.4rem}
 .tl li::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--c)}
 .tl p{margin-top:.6rem;max-width:34ch}
@@ -120,3 +122,4 @@ input:focus,textarea:focus{outline:0;border-color:var(--g)}[aria-invalid=true]{b
 .cp{font-size:.8rem;opacity:.55!important;border-top:1px solid var(--line);padding-top:1.4rem}
 @media(min-width:900px){.ft{grid-template-columns:1.2fr 1fr 1.4fr}.cp{grid-column:1/-1}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;transition-delay:0s!important;scroll-behavior:auto!important}.dial{animation:none}}
+```[cite: 1]
