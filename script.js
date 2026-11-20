@@ -59,7 +59,10 @@ const d=await r.json().catch(()=>({}));
 if(!r.ok||String(d.success)!=='true')throw new Error(d.message||r.status);
 say('Faleminderit! Mesazhi u dërgua me sukses. Do t’ju përgjigjemi sa më shpejt.','ok');
 f.reset();fields.forEach(el=>el.removeAttribute('aria-invalid'));
-}catch(err){console.error('Formulari i kontaktit:',err);say('Mesazhi nuk u dërgua. Ju lutemi provoni përsëri ose na telefononi në +383 44 437 136.','err')}
+}catch(err){console.error('Formulari i kontaktit:',err);say('Mesazhi nuk u dërgua. Ju lutemi na telefononi në +383 44 437 136 ose dërgojeni me email: ','err');
+const a=document.createElement('a');a.textContent='ergit646@gmail.com';
+a.href='mailto:ergit646@gmail.com?subject='+encodeURIComponent('Mesazh nga faqja e Orëtar Seiko')+'&body='+encodeURIComponent(data.message+'\n\n'+data.name+' ('+data.email+')');
+st.append(a)}
 finally{btn.disabled=false;btn.textContent=label}});
 $('#yr').textContent=new Date().getFullYear();
 })();
